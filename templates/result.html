@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Result{% endblock %}
+
+{% block js %}
+<script src="/stuff/raphael-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/stuff/g.raphael-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/stuff/g.pie-min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	window.onload = function () {
+		var r = Raphael("holder");
+		r.g.txtattr.font = "13px Helvetica, Arial, sans-serif";
+		r.g.text(60, 7, "Mark Breakdown").attr({"font-size": 13, "font-weight": "bold"});
+		var pie = r.g.piechart(60, 90, 60, {{ tally }}, {legend: {{ eval }}, legendpos: "east"});
+	};
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="question">
+	<div class="span-1"><h2>Your Result</h2></div>
+	<div class="span-3">
+		<p>{{ result_str.0 }}</p>
+		<h1 class="result">{{ result }}%</h1>
+		<p>{{ result_str.1 }}</p>
+	</div>
+	<div class="span-4 last" id="holder">
+	</div>
+</div>
+
+<div class="question" id="actions">
+	<div class="buttons_row rounded span-7 last">
+		<p><a href="javascript:history.go(-1)" class="btn"><span><span>Try again?</span></span></a> &nbsp; <a href="javascript:window.print()" class="btn"><span><span>Print</span></span></a></p>
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+{% block js %}{% endblock %}
+
+{% block content %}
+<form action="/result" method="post" accept-charset="utf-8">	
+	<div class="question">
+		<div class="span-1"><h2>Future Mark</h2></div>
+		<div class="span-2">
+			<p>If I get <input type="text" name="orig" value="100" class="percentage" size="3" onclick="clickclear(this, '100')" onblur="clickrecall(this,'100')">%</p>
+		</div>
+		<div class="span-5 last">
+			<p>
+				<input type="radio" name="type" value="course" checked="checked" /> in the course, what do I need on the exam?<br><br>
+				<input type="radio" name="type" value="exam" /> on the exam, what's my final mark?
+			</p>
+		</div>
+	</div>
+	
+	<div class="question">
+		<div class="span-1"><h2>Current Marks</h2></div>
+		<div class="span-7 last" id="currs">
+			<div class="curr_array">
+				<div class="span-2">
+					<p>I have <input type="text" name="curr" value="100" class="percentage" size="3" onclick="clickclear(this, '100')" onblur="clickrecall(this,'100')">%</p>
+				</div>
+				<div class="span-2">
+					<p>
+						on <input type="text" name="eval" value="Midterm 1" class="percentage" size="10" onclick="clickclear(this, 'Midterm 1')" onblur="clickrecall(this,'Midterm 1')">
+					</p>
+				</div>
+				<div class="span-3 last">
+					<p>worth <input type="text" name="tally" value="30" class="percentage" size="3" onclick="clickclear(this, '30')" onblur="clickrecall(this,'30')">% of the course</p>
+				</div>
+			</div>
+		</div>
+		<div class="buttons_row span-6 rounded last">
+			<div class="span-4">
+				<p><button type="button" name="add_fields" id="add_fields" class="btn" onClick="addInput('currs');"><span><span>+</span></span></button> &nbsp; <button type="button" name="remove_fields" id="remove_fields" class="btn" onClick="removeInput('currs');"><span><span>&#8211;</span></span></button></p>
+			</div>
+			<div class="span-2 last submit">
+				<p><button type="submit" name="submit" id="submit" class="btn"><span><span>Calculate</span></span></button></p>
+			</div>
+		</div>
+	</div>
+
+</form>
+{% endblock %}
