@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-    main.py
-    ~~~~~~~
+    calcmymarks.markcalc
+    ~~~~~~~~~~~~~~~~~~~~
 
-    Implements the request handlers for CalcMyMarks
+    The mark calculator object
 
     :copyright: (c) 2009-2010 by Aaron Toth.
     :license: Apache 2.0, see LICENSE for more details.
