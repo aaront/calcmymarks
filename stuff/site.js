@@ -1,3 +1,12 @@
+/* -----------------------------------------------------------------------
+
+  CalcMyMarks Scripts
+  http://calcmymarks.appspot.com
+
+   * Copyright (c) 2009-2010 by Aaron Toth. See LICENSE for more info.
+
+----------------------------------------------------------------------- */
+
 var counter = 1;
 var limit = 20;
 var min = 0;

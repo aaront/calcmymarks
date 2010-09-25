@@ -1,12 +1,13 @@
 #!/usr/bin/env python
-# encoding: utf-8
+# -*- coding: utf-8 -*-
 """
-markcalc.py
+    main.py
+    ~~~~~~~
 
-The calculator portion of calcmymarks
+    Implements the request handlers for CalcMyMarks
 
-Created by Aaron Toth on 2009-12-11.
-Copyright (c) 2009 - 2010 Aaron Toth. All rights reserved.
+    :copyright: (c) 2009-2010 by Aaron Toth.
+    :license: Apache 2.0, see LICENSE for more details.
 """
 
 class MarkCalc(object):
